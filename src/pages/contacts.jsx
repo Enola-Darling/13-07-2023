@@ -1,11 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { roomList } from "../mock/reservations";
 import styles from "../styles/index.module.scss";
 import Link from "next/link";
 
-
-export default function Contacts() {
+const Contacts = () => {
   const [contactInfo, setContactInfo] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchContactInfo = () => {
@@ -14,6 +15,10 @@ export default function Contacts() {
 
     fetchContactInfo();
   }, []);
+
+  const handleClick = () => {
+    router.push("/"); 
+  };
 
   return (
     <div className={styles.contactInfo}>
@@ -24,10 +29,10 @@ export default function Contacts() {
           <p>{contact.email}</p>
         </div>
       ))}
-       <Link href="/index"></Link>
-          <button>
-            Home
-          </button>
+      <button onClick={handleClick}>Home</button>
+      <Link href="/" passHref  onClick={handleClick}Home></Link>
     </div>
   );
-}
+};
+
+export default Contacts;
