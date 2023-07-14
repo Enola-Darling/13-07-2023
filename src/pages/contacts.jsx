@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { roomList } from "../mock/reservations";
-import styles from "../styles/index.module.scss";
+import styles from "../styles/Contacts.module.scss";
 import Link from "next/link";
 
 const Contacts = () => {
