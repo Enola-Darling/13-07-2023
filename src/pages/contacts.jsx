@@ -21,6 +21,7 @@ const Contacts = () => {
   };
 
   return (
+    
     <div className={styles.contactInfo}>
       <h1>Contacts Information</h1>
       {contactInfo.map((contact, index) => (

@@ -1,5 +1,10 @@
-import '@/styles/globals.css'
+import HeaderLayout from "@/layouts/HeaderLayout";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+  return (
+    <HeaderLayout>
+      <Component {...pageProps} />
+    </HeaderLayout>
+  )
 }

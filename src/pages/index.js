@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <div> 
       <Link href="/contacts">
-        <button> contacts</button>
+        {/* <button> contacts</button> */}
       </Link>
       <Link href="/locations">
-        <button className={styles.button}> Locations</button>
+        {/* <button className={styles.button}> Locations</button> */}
       </Link>
     </div>
   )
